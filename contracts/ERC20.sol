@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >0.6.0 <0.8.0;
 
+import "hardhat/console.sol";
 /**
  * @title ERC20
  * @dev A super simple ERC20 implementation!
@@ -74,6 +75,7 @@ contract ERC20 {
             uint256
         )
     {
+        console.log("call balanceOf");
         return balances[_owner];
     }
 
