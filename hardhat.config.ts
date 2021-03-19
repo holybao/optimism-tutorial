@@ -20,12 +20,11 @@ require("@nomiclabs/hardhat-waffle");
 // Ropsten
 
 const ALCHEMY_API_KEY = "9q-Ju6bHgcRp9mKae8PV73QNqKCFsmkr";
-const ROPSTEN_PRIVATE_KEY = "YOUR ETH PRIVATE KEY";
+const ROPSTEN_PRIVATE_KEY = "44279b9535cc31f7bd0aadf2edd7df56d571e7e132d8de42088b0d62473abcfc";
 
 // Local Rollup
 
-const DEPLOYER_PRIVATE_KEY = "YOUR ETH PRIVATE KEY";
-
+const DEPLOYER_PRIVATE_KEY = "44279b9535cc31f7bd0aadf2edd7df56d571e7e132d8de42088b0d62473abcfc";
 
 module.exports = {
   solidity: "0.7.3",
@@ -34,7 +33,6 @@ module.exports = {
       	url: `https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
       	accounts: [`0x${ROPSTEN_PRIVATE_KEY}`]
     },
-
 
     local: {
         url: "http://localhost:8545",
