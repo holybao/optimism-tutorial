@@ -1,4 +1,6 @@
 
+import { l2ethers as ethers } from 'hardhat'
+
 async function main() {
 
   const name = 'Some Really Cool Token Name'
@@ -12,10 +14,11 @@ async function main() {
     );
     
     console.log("Account balance:", (await deployer.getBalance()).toString());
+    console.log("Account nonce:", (await deployer.getTransactionCount()).toString());
   
     const Token = await ethers.getContractFactory("ERC20");
+    console.log("Token bytecode:" , Token.bytecode);
     const token = await Token.deploy(initialSupply, name);
-  
     console.log("Token address:", token.address);
     
   }
